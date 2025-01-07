@@ -11,18 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LWStockHolding : NSObject
 
-{
-    float _purchaseSharePrice;
-    float _currentSharePrice;
-    int _numberOfShares;
-}
-
-- (float)purchaseSharePrice;
-- (void)setPurchaseSharePrice:(float)p;
-- (float)currentSharePrice;
-- (void)setCurrentSharePrice:(float)p;
-- (int)numberOfShares;
-- (void)setNumberOfShares:(int)s;
+@property (nonatomic) float purchaseSharePrice;
+@property (nonatomic) float currentSharePrice;
+@property (nonatomic) int numberOfShares;
 
 - (float)costInDollars;
 - (float)valueInDollars;
