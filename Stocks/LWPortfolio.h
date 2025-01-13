@@ -11,9 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LWPortfolio : NSObject
-{
-    NSMutableArray *_holdings;
-}
 
 @property (nonatomic, copy) NSArray *holdings;
 

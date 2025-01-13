@@ -8,6 +8,13 @@
 #import "LWPortfolio.h"
 #import "LWStockHolding.h"
 
+@interface LWPortfolio ()
+{
+    NSMutableArray *_holdings;
+}
+
+@end
+
 @implementation LWPortfolio
 
 - (void)setHoldings:(NSArray *)holdings
@@ -27,6 +34,13 @@
     }
 
     [_holdings addObject:h];
+}
+
+- (void)removeHolding:(LWStockHolding *)h
+{
+    if ([_holdings containsObject:h]) {
+        [_holdings removeObject:h];
+    }
 }
 
 - (float)totalValue
