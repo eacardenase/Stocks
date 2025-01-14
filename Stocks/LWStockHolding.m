@@ -9,6 +9,11 @@
 
 @implementation LWStockHolding
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@: %@>", self.class, self.symbol];
+}
+
 - (float)costInDollars
 {
     return [self purchaseSharePrice] * [self numberOfShares];

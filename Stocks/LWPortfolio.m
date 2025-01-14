@@ -54,4 +54,10 @@
     return sum;
 }
 
+- (NSArray *)sortedHoldingsBySymbol
+{
+    NSSortDescriptor *symbolDesc = [NSSortDescriptor sortDescriptorWithKey:@"symbol" ascending:YES];
+    return [self.holdings sortedArrayUsingDescriptors:@[symbolDesc]];
+}
+
 @end

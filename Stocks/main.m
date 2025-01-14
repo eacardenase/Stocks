@@ -38,6 +38,9 @@ int main(int argc, const char * argv[]) {
         for (LWStockHolding *stock in portfolio.holdings) {
             NSLog(@"%@ stock value is %.2f", stock.symbol, stock.valueInDollars);
         }
+        
+        NSArray *sortedHoldings = [portfolio sortedHoldingsBySymbol];
+        NSLog(@"sortedHoldings: %@", sortedHoldings);
     }
     return 0;
 }
